@@ -1,0 +1,165 @@
+Selenium is suite of tools.
+
+IDE : firefox addon -- record and playback thing
+RC : it does injecting js functions. it is not directly interacting with browser.
+
+Webdriver : it interact directly with browser. 
+Grid: to distribute test on diff machines. hub and node. Parallel execution.
+
+Automation -- UI ---> Browser 
+
+Clieint libraries  --> by injecting js functions 
+
+
+
+Requirement:
+1.Selenium Java dependency
+3.141.59
+2.Based on browser version, we need browser driver.exe file
+Chrome Browser Version:88.0.4324.190
+Chrome Driver exe file: https://chromedriver.chromium.org/downloads  ChromeDriver 88.0.4324.96
+
+
+
+Locators
+
+id
+classname
+partiallinktest
+linktext
+name
+xpath
+css selector
+
+
+10 second  -- after every 500msec it is checking
+
+https://github.com/mozilla/geckodriver/releases
+https://www.selenium.dev/downloads/
+
+
+Build is to compile steps
+Perform is to execute steps
+
+
+Reporting--
+Health certificate for your application or product.
+
+Requirement 
+high level scenarios
+test cases
+test steps
+status of each execution
+
+
+Short concise
+trackable to find root cause
+should contains test cases count along with pass and failure count
+execution time
+format should be such that it is easily sharable over email or chat
+should be compatible to be integrated with other tools
+test coverage - rtm
+
+
+Types of reports-
+1.html report
+2.log - technical flow
+3.excel reports
+4.Screenshots
+5.Cucumber reports
+6.testng reports
+7.junit reports 
+
+
+Databases:
+Oracle
+Mysql
+IBM DB2
+sql server
+ms access
+
+
+
+
+
+
+
+
+
+Functional Testing - > Execution  
+
+
+Pre Requisite
+Test Suites
+Test Cases -> Test Data
+Check for Reports
+Defect
+
+TESTNG
+Testing framework 
+Based on Annotations
+Help our code or functions written to get group in diff suites and tests
+Java features
+put interdependency of tests
+Can integrate with maven and jenkins
+
+<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>6.9.9</version>
+		</dependency>
+
+
+
+TestNG - http://dl.bintray.com/testng-team/testng-eclipse-release/
+
+
+
+
+
+@BeforeSuite  -- before start of every test suite
+@AfterSuite -- after complete execution of test suites
+@Test -- this denote our test case
+@BeforeMethod  -- before every test
+@BeforeTest -- before all the test
+
+
+
+
+Before Suite > Before Test > Before Class > Before Method > Test1 > After Method > 
+Before Method > Test2 > After Method > After Class > After Test > After Suite
+
+
+Priority : to handle order of test execution. By default is ascending order.
+Description : to give meanning to test methods
+Timeout : to test whether our test is executing within designated time.
+DataProvider : to provide data to run same test ,multiple time
+DataProviderClass : to read dataprovider from another class. has to be static to get called from another class.
+
+
+Assertions are checkpoint or validation.
+Soft Assertion - verify 
+if assertion fails in test then it will execute further steps in test.
+
+Hard Assertion - assert   
+if assertion fails in test then it will not going to execute further steps in test.
+
+
+Enabled if equals to false will ignore the test and not execute that.
+
+Groups- categorising tests in multiple categories
+DependsOnGroups - execution of current test will depend on pass result of group name specified else its execution will be skipped.
+
+dependsOnMethods -execution of current test will depend on pass result of test method specified else its execution will be skipped.
+alwaysrun - test get executed irrespective of its dependency on another test result.
+
+InvocationCount - no of times method is called.
+InvocationTimeOut- max no of msec for all invocations together
+Timeout- max no of msec for each invocation of test.
+
+
+ExpectedException - when we expect certain exception to be thrown by test methhod - pass else fail.
+ExpectedExceptionsMessageRegularExpression - message in thrown exception should match the message expected.
+
+
+
