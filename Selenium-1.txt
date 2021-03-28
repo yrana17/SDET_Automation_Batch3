@@ -163,3 +163,225 @@ ExpectedExceptionsMessageRegularExpression - message in thrown exception should 
 
 
 
+
+
+
+
+Page Object Model - POM MOdel
+
+Create a Repo for web elements 
+
+UI -> Pages  -> Define Locators & Methods all together
+
+It means each class will contains details about 1 UI.
+
+Code duplication
+script maintainance
+
+As test suite grows our maintainance will become tough.
+
+
+POM -
+LoginPage
+HomePage -->  Directory Tab  + Logout
+DirectoryPage -> Search By Name + read the details
+		 Reset
+		 Search by Title + read the details
+		 Reset
+		 Search by Location + read the details
+
+
+
+	@FindBy(linkText = "Forgot your password?")
+	WebElement forgotPswd;
+
+	@FindBy(tagName = "a")
+	List<WebElement> lnk;
+
+//FindBys will fulfill both criterias
+	@FindBys({ @FindBy(how = How.ID, using = "txtUsername"), @FindBy(how = How.NAME, using = "txtPassword") })
+	List<WebElement> bothCriterias;
+
+//FindAll will select elements fulfilling either of the criterias
+	@FindAll({ @FindBy(id = "txtUsername"), @FindBy(name = "txtPassword") })
+	List<WebElement> eitherCriterias;
+
+
+
+
+
+
+
+Insprint Automation
+
+2 week sprint  :  Tuesday - Next to next week Monday
+
+4 days - dev completed 1 story    (fsd + tdd + scenarios & test case creation + test data creation)
+
+day 1 --  tuesday only -- start writing my code (be ready with my architecture of code) - automation planning
+
+local dev env access  --> devloper develop i can get replica of same
+
+Selenium java code  ->  push to github   -> integrated same to jenkins  --> jenkins job is created for our testing
+-> provide parameter values like which test to run in jenkin job
+
+CI CD   --> CT
+
+Jenkins CICD Pipileine  --> post build step : automation job is ready from our side and kick of once deploymenmt is done.
+
+once CICDCT is done so everyone get notification via email with attached report on the success or failure execution.
+
+
+
+Dev -> code commit > git hub > jenkins  > build > test > stage > deploy
+
+
+
+
+
+
+
+
+TDD VS BDD VS ATDD
+
+
+
+Requirement  -- Business
+
+
+Agile  -- 2 weeks sprint 
+
+
+Product owner
+Scrum Master
+Dev
+QE/Automation QE
+
+
+
+
+1.TDD - Test Driven Development
+
+I will write some test
+execute test -- fail or Pass
+
+if fail --> refactor code
+
+Again Execute it chk for fail or pass 
+
+if fail --> refactor
+
+else
+
+move to new one
+
+Fixed set of input and expected output knwon in advance.
+Unit Testing.
+
+
+2.BDD - Behavioral Driven Development
+
+Business Experts writing tests 
+done before development begins
+
+Grooming Session --> writing or fixing requirements
+
+
+3.ATDD --  Acceptance Test Driven Development
+
+Requirements  
+
+50 user stories 
+business expert will define those stories
+they explain them in simple ENGLISH language
+
+Given   --> what we already have or where we are actually
+When    --> steps to be executed or Actions 
+Then    -->  Expected Result
+
+
+
+Demo to Business Person => Product Owner who accpt or reject the story based on the demo provided.
+
+
+
+
+Cucumbers Plugin - https://cucumber.github.io/cucumber-eclipse/update-site
+
+
+Cucumber is a tool based on BDD Framework.
+
+Feature File  - file with .feature extension
+Feature Name
+Scenarios
+Given
+And
+When
+Then
+
+We can provide test data in feature file itself  -> Scenario ouline and Examples
+
+Hooks
+They are basically before and after condition
+@before  -- it will execute before each scenario
+@after   -- it will execute after each scenario
+
+Tagged Hooks
+
+Ordering of hooks
+Before works on ascending order
+After works on descending order
+
+
+Background
+LIst of steps we want to execute before each scenario
+It is related to feature level.
+
+
+CucumberOptions  --> Property or configuration file for testing your cucumber files.
+features - path of feature file
+Dry run checks for step definition for each step
+glue= path of step def
+tags = scenario tags we want to execute
+format = report format
+
+
+
+
+JSON is Javascript object notation.
+.json extension
+
+
+{
+
+[
+
+
+REST API----
+
+Get is Read
+Post is create
+Put is create or replace. if found update else create new one.
+Patch is update
+Delete is delete
+
+
+
+
+Mock API
+
+1.download node.js for windows
+2.open cmd
+3.npm install json-server
+4.json-server --watch test.json
+
+
+
+
+GET :  http://localhost:3000/users?courseid=1
+?courseid=1  denotes my query parameters
+
+
+
+PUT can update overall data or replace.
+PATCH is for update only.

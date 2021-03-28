@@ -1,0 +1,44 @@
+{
+	"employee": [
+	
+		{
+			"id": 1,
+			"name": "Rahul",
+			"salary": 570000,
+			"age": 29,
+			"empid": "E0197"
+		},
+		
+		{
+			"id":2,
+			"name": "Rohit",
+			"salary": 50000,
+			"age": 28,
+			"empid": "E0195"
+		},
+
+
+		{
+			"id":3,
+			"name": "Kohli",
+			"salary": 70000,
+			"age": 31,
+			"empid": "E0193"
+		}
+	] ,
+	
+	"sports": [
+		{
+			"name": "Cricket",
+			"id" : 1
+		},
+		{
+			"name": "Football",
+			"id" : 2
+		}
+	]
+}
+
+
+
+
