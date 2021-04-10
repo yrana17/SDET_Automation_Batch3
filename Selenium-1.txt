@@ -385,3 +385,20 @@ GET :  http://localhost:3000/users?courseid=1
 
 PUT can update overall data or replace.
 PATCH is for update only.
+
+
+
+
+
+Case Study:
+1.Insert Data into Excel Sheet Manually to feed into UI like credentials, search inputs, file locations
+2.Read Data from Excel Sheet and store it in Collection
+3.Login to https://opensource-demo.orangehrmlive.com/index.php/auth/login
+4.Go to Admin > Organization > General information
+Read All Data and Store it into COllection and write into Excel Sheet with Heading
+Same time take Screenshots and save it in folder with descriptive name
+5.Go to Admin > Organization > Locations > Search By City Name
+Read ALl Data and Store it into COllection and write into Excel Sheet with Heading
+Same time take Screenshots and save it in folder with descriptive name
+6.Store Data in Advance in JSON from Organisation > Location Page based on City 
+7.Compare Data read from UI against Json

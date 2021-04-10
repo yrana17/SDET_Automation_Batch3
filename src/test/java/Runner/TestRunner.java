@@ -9,13 +9,16 @@ import cucumber.api.CucumberOptions;
 import cucumber.api.testng.CucumberFeatureWrapper;
 import cucumber.api.testng.TestNGCucumberRunner;
 
-@CucumberOptions(features = "src/test/resources", 
-		glue = { "stepdefinitions" },
-		tags = { "@loginOrangeHRM,@tag1,@Directory" },
-		format = {
-		"pretty", "html:target/cucumber-reports/cucumber-pretty",
-		"json:target/cucumber-reports/CucumberTestReport.json"}, 
-		plugin = "json:target/cucumber-reports/CucumberTestReport.json")
+@CucumberOptions(features = { "src/test/resources" }, plugin = {
+		"com.cucumber.listener.ExtentCucumberFormatter:CucumberReports/Extent-Cucumber-reports/CucumberExtent.html" }, 
+		glue = {"stepdefinitions" }, 
+		tags = { "@Directory" }, 
+		format = { "pretty",
+						"html:CucumberReports/cucumber-reports/cucumber-pretty",
+						"json:CucumberReports/cucumber-reports/CucumberTestReport.json",
+						"junit:CucumberReports/cucumber-reports/Cucumber.xml",
+						"rerun:CucumberReports/cucumber-reports/rerun.txt" },
+		monochrome = true)
 
 public class TestRunner {
 
